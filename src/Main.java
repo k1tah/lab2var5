@@ -7,10 +7,10 @@ public class Main {
         double x = input.nextDouble();
         System.out.println("Введите число n:");
         int n = input.nextInt();
-        if (x < 1 && x > -1) {
+        if (Math.abs(x) < 1) {
             double sum = 0;
             for (int i = 0; i < n; i++) {
-                sum += Math.pow(x, 2 * n + 1) / (2 * n + 1);
+                sum += Math.pow(x, 2 * i + 1) / (2 * i + 1);
             }
             System.out.println(sum * 2);
         } else {
